@@ -1,0 +1,12 @@
+class Solution:
+    def firstOccurence(self,txt,pat):
+        #code here
+        txtlen=len(txt)
+        patlen=len(pat)
+        for i in range(txtlen-patlen+1):
+            substr=""
+            for j in range(patlen):
+                substr+=txt[i+j]
+            if substr==pat:
+                return i
+        return -1
